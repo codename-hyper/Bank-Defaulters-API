@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block title %}Defaulter Prediction{% endblock %}
+
+{% block content %}
+<div class="mx-auto" style="width: 340px;">
+    <h1><span class="badge badge-primary">Enter Details to predict:</span></h1>
+</div>
+
+<form action="/predict" method="post">
+    <div class="form-group">
+        <div class="mx-auto" style="width: 300px;">
+            <label>Employment length in years:</label>
+            <input type="number" name="emp" class="form-control" placeholder="10" required>
+
+            <label>Home Ownership:</label>
+            <select name="home_own" class="form-control">
+                <option>Rent</option>
+                <option>Own</option>
+                <option>Mortgage</option>
+            </select>
+
+            <label>Annual income:</label>
+            <input type="number" name="ann_inc" class="form-control" placeholder="30,000" required>
+
+            <label>Income category:</label>
+            <select name="inc_cat" class="form-control">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+
+            <label>Loan amount:</label>
+            <input type="number" name="loan" class="form-control" placeholder="10,000" required>
+
+            <label>Term in months:</label>
+            <input type="number" name="term" class="form-control" placeholder="36" required>
+
+            <label>Purpose:</label>
+            <select name="purpose" class="form-control">
+                <option>Credit card</option>
+                <option>Car</option>
+                <option>Small business</option>
+                <option>Other</option>
+                <option>Wedding</option>
+                <option>Debt consolidation</option>
+                <option>Home improvement</option>
+                <option>Major purchase</option>
+                <option>Medical</option>
+                <option>Moving</option>
+                <option>Vacation</option>
+                <option>House</option>
+                <option>Renewable energy</option>
+            </select>
+
+            <label>Interest payment category:</label>
+            <select name="interest_cat" class="form-control">
+                <option>Low</option>
+                <option>High</option>
+            </select>
+
+            <label>Interest rate:</label>
+            <input type="number" name="Interest_rate" class="form-control" placeholder="10.65" required>
+
+            <label>Grade:</label>
+            <select name="grade" class="form-control">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+                <option>D</option>
+                <option>E</option>
+                <option>F</option>
+                <option>G</option>
+            </select>
+
+            <label>DTI:</label>
+            <input type="number" name="dti" class="form-control" placeholder="27.65" required>
+
+            <label>Total payment:</label>
+            <input type="number" name="tot_pay" class="form-control" placeholder="12,000" required>
+
+            <label>Principal amount:</label>
+            <input type="number" name="tot_prncp" class="form-control" placeholder="10,000" required>
+
+            <label>Installment amount:</label>
+            <input type="number" name="installments" class="form-control" placeholder="339" required>
+            <div class="row mx-md-n5">
+                <div class="col px-md-5"><div class="p-3 border bg-light">
+                    <input class="btn btn-primary" type="submit" value="Submit">
+                    <input class="btn btn-primary" type="reset" value="Reset">
+                </div></div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}
